@@ -1,0 +1,29 @@
+{% extends 'base.html' %}.
+{% block title %}{{ post.title }} - Boss Flask Blog{% endblock %}
+{% block content%}
+<div class="container content-container">
+  <div class="row g-0">
+    <div class="col-md-9 order-md-2">
+      <div class="post-page-block">
+        <h3>{{ post.title }}</h3>
+        {% if post.created_at %}
+          <p class="p-small-two text-muted">
+            {{ post.created_at.strftime("%d.%m.%Y") }}
+          </p>
+        {% endif %}
+        {% if current_user.is_authenticated and current_user == post.author %}
+        <a class="btn btn-sm btn-outline-success mr-1" href="{{ url_for('post_update', post_id=post.id) }}">Aggiorna</a>
+        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal">
+          Cancella 
+        </button>
+        {% endif %}
+        <p>{{ post.body|markdown }}</p>
+      </div>
+    </div>    
+    <div class="col-md-3 order-md-1">
+      {% include 'about_me_snippet.html' %}
+    </div>
+  </div>
+</div>
+{% include 'post_delete_modal.html' %}
+{% endblock %}
