@@ -1,15 +1,16 @@
 {% extends 'base.html' %}.
-{% block title %} About {% endblock %}
+{% block title %} 404 - Pagina Non Trovata {% endblock %}
 {% block content%}
 <div class="container content-container">
   <div class="row g-0">
     <div class="col-md-9 order-md-2">
       <div class="about-page-block">
-        <p class="lead">About Me.</p>
+        <p class="lead">Errore 404.</p>
         <hr>
-        {{ lipsum() }}
+        <p>Pagina Non Trovata</p>
+        <p>La pagina richiesta non esiste o l'url digitato non è corretto.</p>
         <hr>
-        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('contact') }}">Contact Me.</a>
+        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('homepage') }}"> Tutti i Post</a>
       </div>
     </div>    
     <div class="col-md-3 order-md-1">

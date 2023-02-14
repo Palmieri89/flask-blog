@@ -22,7 +22,7 @@ with app.app_context():
 #stiamo aggiungendo questo parametro render_as_batch=True qual'ora la nostra applicazione stia utilizzando come dabase sqlite serve per venire incontro alle limitazioni
 #di questo specifico dabase, se dobbiamo apportare delle modiche allo schema del database viene creato un clone della tabella più le modifiche
 
-from blog import models, routes
+from blog import errors, models, routes
 #una volta importato models con i modelli lanciamo il dabase da terminale con flask db init
 # creiamo le tabelle con flask migrate - flask db migrate -m "Creazione Tabelle Post e User"
 # andiamo ad apportare le modifiche tramite le nuove funzioni che sono state create flask db upgrade

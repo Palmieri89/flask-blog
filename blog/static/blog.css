@@ -17,6 +17,9 @@ html, body {
   margin-bottom: 30px;
   padding: 0px;
 }
+.pagination-block{
+  margin-bottom: 30px;
+}
 .about-snippet-block {
   background-color: #fff;
   border: 1px solid #d3d3d3;
@@ -29,6 +32,16 @@ html, body {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 30px;
+}
+.no-border-top{
+  border-top: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.post-image{
+  border: 1px solid #d3d3d3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .about-page-block {
   background-color: #fff;
@@ -57,6 +70,13 @@ html, body {
   color: #343a40;
   text-decoration: none;
 }
+.read-more{
+  color: #6c757d;
+  text-decoration: underline;
+}
+.read-more:hover{
+  color: #343a40 !important;
+}
 @media (min-width:768px) {
   .single-post-home {
     margin-left: 30px;
@@ -66,5 +86,17 @@ html, body {
   }
   .post-page-block{
     margin-left: 30px;
+  }
+  .post-image-block{
+    margin-left: 30px;
+  }
+  .pagination-block{
+    margin-left: 30px;
+  }
+}
+@media(min-width:768px){
+  .nav-link{
+    padding-right: 0px !important;
+    padding-left: 1rem !important;
   }
 }

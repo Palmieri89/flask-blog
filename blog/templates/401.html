@@ -1,15 +1,16 @@
 {% extends 'base.html' %}.
-{% block title %} About {% endblock %}
+{% block title %} 401 - Accesso Negato {% endblock %}
 {% block content%}
 <div class="container content-container">
   <div class="row g-0">
     <div class="col-md-9 order-md-2">
       <div class="about-page-block">
-        <p class="lead">About Me.</p>
+        <p class="lead">Errore 401.</p>
         <hr>
-        {{ lipsum() }}
+        <p>Accesso Negato</p>
+        <p>Non di dispone dei permessi necessari a poter effettuare l'operazione.</p>
         <hr>
-        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('contact') }}">Contact Me.</a>
+        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('homepage') }}"> Tutti i Post</a>
       </div>
     </div>    
     <div class="col-md-3 order-md-1">
